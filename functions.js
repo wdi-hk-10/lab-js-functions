@@ -1,5 +1,5 @@
 // Question 1
-function maxOfTwoNumbers(x, y) {
+function maxOfTwo(x, y) {
   if (x > y){
     return x;
   } else if (x < y) {
@@ -20,18 +20,27 @@ function maxOfThree(x, y, z) {
   }
 }
 
+OR
+
+function maxOfThree2(x, y, z) {
+  return maxOfTwo(x, maxOfTwo(y, z));
+}
+
 // Question 3
-function isCharacterAVowel('') {
+function isCharacterAVowel(vwl) {
   var vowels = ['a', 'e,' 'i', 'o', 'u'];
   var vowelCheck = false;
 
-  for (var i = 0; i < Things.length; i++) {
-    Things[i]
-  };
+  for (var i = 0; i < vowels.length; i++) {
+    if (vwl == vowels[i]) {
+      vowelCheck = true;
+    }
+  }
+  console.log(vowelCheck)
 }
 
 // Question 4
-function sumArray() {
+function sumArray(arr) {
   var array = [4, 2, 1, 9, 7];
   var sum = 0;
   for(var i = 0; i<array.length; i++) {
@@ -42,7 +51,7 @@ function sumArray() {
 
 
 // Question 4
-function multiplyArray() {
+function multiplyArray(arr) {
   var array = [4, 2, 1, 9, 7];
   var sum = 1;
   for(var i = 0; i<array.length; i++) {
@@ -54,9 +63,9 @@ function multiplyArray() {
 
 // Question 5
 function reverseString(str){
-  var a = '';
+  var a = [];
     for (var i = str.length-1;  i>=0; i--) {
-        a += str[i];
+        a.push(str[i]);
     }
     return a;
 }
